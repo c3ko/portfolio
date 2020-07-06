@@ -1,3 +1,20 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+
+
+.bubble-label {
+    visibility: hidden;
+    @apply ml-2 px-2 border border-gray-300 bg-gray-300 rounded-lg;
+
+}
+
+.nav-item:hover > .bubble-label {
+    visibility: visible;
+    @apply relative
+}
+
+.main-container {
+    max-width: 1400px;
+}
