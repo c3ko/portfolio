@@ -11,10 +11,24 @@
 }
 
 .nav-item:hover > .bubble-label {
+    z-index: 200;
     visibility: visible;
-    @apply relative
+    @apply relative;
 }
 
 .main-container {
     max-width: 1400px;
+}
+
+.screenshot-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
+.screenshot-container > img {
+    flex-shrink: 0;
+    min-width: 100%;
+    max-width: 100%;
 }

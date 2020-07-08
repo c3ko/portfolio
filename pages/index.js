@@ -13,7 +13,7 @@ export default function Home({ allPostsData }) {
       </Head>
       <main className="flex mt-16 px-8 main-container mx-auto">
         <SideBar />
-        <div className="ml-20 mr-4 md:px-4 md:ml-16 mx-auto w-px-300 h-full">
+        <div className="ml-24 mr-4 md:px-4 md:ml-24 mx-auto h-full w-auto">
           <Intro />
           <Projects />
         </div>

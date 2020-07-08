@@ -13,7 +13,7 @@ import ContactIcon from '../public/img/envelope.svg'
 function NavBarItemIcons( { name, children }) {
     return (
             <li className="mb-4 m-xs-h:mb-2">
-                <Link href={name == 'About Me' ? 'about' : `/${name.toLowerCase()}`}>
+                <Link href={name == 'About Me' ? '#about' : `#${name.toLowerCase()}`}>
                     <a>
                         <span className="nav-item  inline-flex">
                             {children}
