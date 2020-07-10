@@ -2,6 +2,17 @@
 module.exports = {
     purge: ['./components/**/*.js', './pages/**/*.js'],
     theme: {
+      top: {
+        'auto': 'auto',
+        '0': 0,
+        '1/2': '50%'
+      },
+      left: {
+        'auto': 'auto',
+        '0': 0,
+        '1/2': '50%'
+      },
+
       screens: {
         'xs': '354px',
         
@@ -19,6 +30,8 @@ module.exports = {
         'm-xs-h': {'raw': '(max-height: 376px)'},
       },
       extend: {
+
+        
         colors: {
           'accent-1': '#FAFAFA',
           'accent-2': '#EAEAEA',

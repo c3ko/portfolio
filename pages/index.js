@@ -11,12 +11,10 @@ export default function Home({ allPostsData }) {
         <title>Mohamed O.K</title>
         <link rel="icon" href="/img/rect83.png" />
       </Head>
-      <main className="flex mt-16 px-8 main-container mx-auto">
-        <SideBar />
-        <div className="ml-24 mr-4 md:px-4 md:ml-24 mx-auto h-full w-auto">
-          <Intro />
+      <Intro />
+      <main className="mt-16 main-container mx-auto">
           <Projects />
-        </div>
+        
       </main>
     </>
   )
