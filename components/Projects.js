@@ -1,9 +1,4 @@
 import React from 'react';
-import IMACScreen from './IMACScreen'
-
-function StackUsedBar() {
-    const stackList = [{name: 'React', icon: null}, {name: 'Vue', icon: null}, {name: 'Spring Boot'}]
-}
 
 
 function ProjectItem({ projectInfo }) {
@@ -48,7 +43,6 @@ function Projects() {
         ]
     return (
         <div className="bg-gray-600 mt-16">
-            sadsa
         </div>
     )
 }

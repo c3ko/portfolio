@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import { getAllPostsSorted } from '../lib/api'
-import SideBar from '../components/SideBar'
+import NavBar from '../components/NavBar'
 import Intro from '../components/Intro'
 import Projects from '../components/Projects'
 
@@ -12,6 +12,7 @@ export default function Home({ allPostsData }) {
         <link rel="icon" href="/img/rect83.png" />
       </Head>
       <Intro />
+      <NavBar />
       <main className="mt-16 main-container mx-auto">
           <Projects />
         
