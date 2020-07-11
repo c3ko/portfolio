@@ -26,8 +26,8 @@ body {
 .large-header {
     position: relative;
     width: 100%;
-    min-height: 500px;
-    background-image: linear-gradient(rgba(29, 38, 113, 0.8), rgba(195, 55, 100, 0.8)), url('/img/computer_company-min.jpg');
+    height: calc(100vh - 60px);
+    background-image: linear-gradient(rgba(195, 55, 100, 0.8),rgba(29, 38, 113, 0.8) ), url('/img/computer_company-min.jpg');
     background-color: #111;
     overflow: hidden;
     background-position: center center;
@@ -52,6 +52,51 @@ body {
 
  }
  
+ 
+ .navbar {
+     background-color: rgba(29, 38, 113, 1);
+ }
+
+ a.nav-link {
+    position: relative;
+    width: 100%;
+    height: 100%;
+ }
+
+
+ li.nav-item {
+     display: block;
+     height: 100%;
+ }
+
+ a.nav-link:hover {
+     color: aqua;
+ }
+
+
+ a.nav-link:hover::before {
+    display: block;
+    content: '';
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    top: -100%;
+    background-color: aqua;
+    
+}
+
+ a.nav-link:hover::after {
+     display: block;
+     content: '';
+     height: 4px;
+     width: 100%;
+     position: absolute;
+     bottom: -115%;
+     background-color: aqua;
+     
+ }
+
+
  .main-title .bold {
     font-weight: 800;
  }
