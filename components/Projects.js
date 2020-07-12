@@ -2,32 +2,11 @@ import React from 'react';
 
 
 function ProjectItem({ projectInfo }) {
-
     return (
-        <li className="border-2 border-transparent cursor-pointer hover:border-green-400  overflow-hidden m-2">
-
-            <img className="w-full" src={projectInfo.imgPath} alt={projectInfo.name} />
-            <div className="px-6 py-4 text-center">
-                <div className="font-bold text-xl mb-2">{projectInfo.name}</div>
-                <p className="text-gray-700">
-                    {projectInfo.excerpt}
-                </p>
-            </div>
-            <div className="px-6 py-4">
-                {projectInfo.tagsList.map((tag, index) => <span className={"inline-block bg-green-500 rounded-sm px-3 py-1 text-sm font-semibold text-gray-100" + (projectInfo.tagsList.length === index + 1 ? "" : " mr-4")}>{tag}</span>)}
-
-            </div>
-        </li>
+        <></>
     )
 }
 
-function ProjectItemList ({ }) {
-    return (
-        <div classN>
-
-        </div>
-    )
-}
 function Projects() {
 
     const projectsList = [{name: 'Umlify', link: 'http://www.umlify.com', imgPath: '/img/umlify_thumbnail.png', excerpt: 'Generate UML class diagrams from Java source code.',
@@ -42,8 +21,11 @@ function Projects() {
 
         ]
     return (
-        <div className="bg-gray-600 mt-16">
-        </div>
+        <section id="projects" className="bg-gray-100 text-purple-800 py-20 fix-margin">
+            <div className="mx-auto w-3/4">
+                <h2 className="section-heading fix-margin">Projects</h2>
+            </div>
+        </section>
     )
 }
 

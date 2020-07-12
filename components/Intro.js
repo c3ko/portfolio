@@ -5,9 +5,9 @@ import LinkedInIcon from '../public/img/linkedin.svg'
 function Intro() {
     return (
 
-            <section className="content" >
+            <section id="home" className="content" >
                 <div className="large-header text-center flex justify-center align-middle">
-                    <h1 className="font-thin uppercase m-auto text-3xl sm:text-4xl text-gray-100">
+                    <h1 className="font-thin uppercase m-auto text-xl sm:text-4xl text-gray-100">
                         Hi, I'm <span className="font-bold text-red-500">Mohamed.</span>
                         <br />
                         <span className=""> I'm a Full Stack Developer.</span>
@@ -15,7 +15,7 @@ function Intro() {
                         <span className="flex flex-wrap items-center text-sm justify-center w-full mt-8">
                             <button className="btn mr-4 hover:bg-teal-600 focus:border-green-900 focus:border-4 hover:border-transparent">See My Work</button>
                             <button className="btn hover:bg-teal-600 hover:border-transparent">Visit My Blog</button>
-                            </span>
+                        </span>
 
 
                     </h1>
