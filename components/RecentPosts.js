@@ -1,9 +1,19 @@
 import React from 'react';
 
-function RecentPosts() {
+function PostItm({ post}) {
+    return (
+        <li className="">
+
+        </li>
+    )
+}
+
+function RecentPosts({ posts }) {
     return (
         <div className="">
-            
+            <ul className="">
+
+            </ul>
         </div>
     )
 }

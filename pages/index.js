@@ -4,6 +4,9 @@ import NavBar from '../components/NavBar'
 import Intro from '../components/Intro'
 import Projects from '../components/Projects'
 import About from '../components/About'
+import Experience from '../components/Experience'
+import RecentPosts from '../components/RecentPosts'
+import Contact from '../components/Contact'
 
 export default function Home({ allPostsData }) {
   return (
@@ -15,8 +18,11 @@ export default function Home({ allPostsData }) {
       <Intro />
       <NavBar />
       <main className="">
-          <About posts={allPostsData} />
+          <About />
           <Projects />
+          <Experience />
+          <RecentPosts posts={allPostsData} />
+          <Contact />
       </main>
     </>
   )

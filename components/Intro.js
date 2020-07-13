@@ -1,7 +1,5 @@
 import React from 'react';
-import GithubIcon from '../public/img/github.svg'
-import InstagramIcon from '../public/img/instagram.svg'
-import LinkedInIcon from '../public/img/linkedin.svg'
+
 function Intro() {
     return (
 
@@ -13,11 +11,9 @@ function Intro() {
                         <span className=""> I'm a Full Stack Developer.</span>
                         <br />
                         <span className="flex flex-wrap items-center text-sm justify-center w-full mt-8">
-                            <button className="btn mr-4 hover:bg-teal-600 focus:border-green-900 focus:border-4 hover:border-transparent">See My Work</button>
-                            <button className="btn hover:bg-teal-600 hover:border-transparent">Visit My Blog</button>
+                            <a className="" href="#projects"><button className="btn mr-4 hover:bg-teal-600 focus:border-green-900 focus:border-4 hover:border-transparent">See My Work</button></a>
+                            <a className="" href="#contact"><button className="btn mr-4 hover:bg-teal-600 focus:border-green-900 focus:border-4 hover:border-transparent">Contact Me</button></a>
                         </span>
-
-
                     </h1>
                 </div>
             </section>

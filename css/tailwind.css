@@ -13,6 +13,10 @@ body {
 
 }
 
+.justify-self-start {
+    justify-self: start;
+}
+
 .nav-item:hover > .bubble-label {
     z-index: 200;
     @apply block relative;
@@ -25,6 +29,13 @@ body {
 .fix-margin {
     margin: 0;
 }
+
+.flex-half {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 50%;
+}
+
 .large-header {
     position: relative;
     width: 100%;

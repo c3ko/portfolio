@@ -16,7 +16,7 @@ function NavBarItem( { name }) {
 
 function NavBar() {
 
-    const links = ['Home', 'About', 'Projects', 'Training', 'Experience',  'Contact']
+    const links = ['Home', 'About', 'Projects', 'Training', 'Blog', 'Contact']
     return (
         <nav className="sm:sticky sm:top-0">
             <ul className="navbar w-full items-center flex flex-col sm:flex-row bg-purple-800 text-gray-100 flex-no-wrap justify-center border-b-4 border-purple-400">
