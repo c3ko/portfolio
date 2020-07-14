@@ -1,5 +1,6 @@
 import React from 'react';
 import Timeline from './Timeline'
+import Skills from './Skills';
 
 function Experience() {
     const schoolList = [
@@ -11,11 +12,12 @@ function Experience() {
     const skillsList = ['Javascript', 'Python', 'Java', 'C/C++', 'Django', 'React', 'Vue']
     
     return (
-        <section id="training" className="bg-gray-100 py-12">
-            <div className="mx-auto w-10/12">
+        <section id="experience" className="bg-white py-12">
+            <div className="mx-auto w-10/12 max-w-5xl">
                 <h2 className="section-heading mx-auto text-purple-800 mb-0">Experience</h2>
-                <div className="flex flex-wrap">
+                <div className="flex justify-center flex-wrap md:flex-nowrap mx-auto w-11/12">
                     <Timeline schoolsList={schoolList}/>
+                    <Skills skillsList={skillsList} />
                 </div>
                 
 

@@ -12,7 +12,7 @@ function Timeline({ schoolsList }) {
             <div className="flex-1 ml-4 font-medium">{`${school.start} -- ${school.end}`}</div>
                 </div>
                 <div className="ml-12">
-                    <p className="font-medium text-md">{school.name}</p>
+                    <p className="font-semibold text-md">{school.name}</p>
                     <p className="mt-2">{school.program}</p>
                 </div>
             </li>)) }

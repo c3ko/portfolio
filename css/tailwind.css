@@ -13,6 +13,10 @@ body {
 
 }
 
+.skills-tag {
+    width: fit-content;
+    height: fit-content;
+}
 .justify-self-start {
     justify-self: start;
 }
@@ -73,7 +77,7 @@ body {
  }
 
 
- a.nav-link:hover::before {
+ a.nav-links:hover::before {
     display: block;
     content: '';
     height: 4px;

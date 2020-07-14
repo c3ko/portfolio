@@ -7,6 +7,7 @@ import About from '../components/About'
 import Experience from '../components/Experience'
 import RecentPosts from '../components/RecentPosts'
 import Contact from '../components/Contact'
+import Footer from '../components/Footer'
 
 export default function Home({ allPostsData }) {
   return (
@@ -23,6 +24,7 @@ export default function Home({ allPostsData }) {
           <Experience />
           <RecentPosts posts={allPostsData} />
           <Contact />
+          <Footer />
       </main>
     </>
   )
