@@ -3,7 +3,5 @@
       "next/babel"
     ],
     "plugins": [
-      "inline-react-svg",
-      "styled-jsx/babel"
     ]
   }
