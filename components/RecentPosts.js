@@ -12,9 +12,13 @@ function PostItem({ post }) {
 
 function RecentPosts({ posts }) {
     return (
-        <section id="blog" className="bg-gray-200 py-12">
+        <section id="blog" className="bg-gray-100 py-12">
             <div className="mx-auto w-10/12">
                 <h2 className="section-heading h-12 mx-auto text-purple-800 mb-0">Blog</h2>
+                <p className="mx-auto max-w-4xl mt-8 text-xl font-medium">
+                    The most recent posts from my blog, where I write about my thoughts and experience using different technologies to develop sites/applications (such as the site you're currently reading this in).
+                </p>
+
                 <ul className="flex flex-wrap justify-center mt-8">
                     {posts.map(post => <PostItem post={post}/>)}
                 </ul>
