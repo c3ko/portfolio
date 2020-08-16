@@ -6,7 +6,7 @@ function Timeline({ schoolsList }) {
         <div className="border-r-2 border-purple-800 absolute h-full top-0" style={{left: "15px"}}></div>
         <ul className="list-none m-0 p-0">
             { schoolsList.map(school => (
-            <li className="mb-12">
+            <li key={school} className="mb-12">
                 <div className="flex items-center mb-1">
                     <div className="bg-purple-800 rounded-full h-8 w-8"></div>
             <div className="flex-1 ml-4 font-medium">{`${school.start} -- ${school.end}`}</div>

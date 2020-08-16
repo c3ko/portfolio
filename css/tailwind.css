@@ -8,9 +8,27 @@ body {
     font-family: 'Raleway', sans-serif;
 }
 
-.bubble-label {
-    @apply hidden ml-2 px-2 border border-gray-300 bg-gray-300 rounded-sm;
 
+.Chevron {
+    position:relative;
+    display:block;
+    height:50px; /*height should be double border*/
+}
+.Chevron::before,
+.Chevron::after {
+    position:absolute;
+    display:block;
+    content:"";
+    border:25px solid transparent; /*adjust size*/
+}
+/*Change the four instances of 'top' below to rotate (top/right/bottom/left)*/
+.Chevron::before {
+    right:0;
+    border-right-color:#805ad5; /*Chevron Color*/
+}
+.Chevron::after {
+    right:-10px; /*adjust thickness*/
+    border-right-color:#fff; /*Match background colour*/
 }
 
 .skills-tag {

@@ -9,7 +9,7 @@ function Experience() {
     
     ]
 
-    const skillsList = ['Javascript', 'Python', 'Java', 'C/C++', 'Django', 'React', 'Vue']
+    const skillsList = ['Javascript', 'Python', 'Java', 'C/C++', 'Django', 'AWS', 'React', 'Vue']
     
     return (
         <section id="experience" className="bg-white py-12">

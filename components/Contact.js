@@ -1,26 +1,39 @@
 import React, { useState } from 'react';
 
-function ContactImage(){
-    return (
-        <>
-            <svg>
-                
-            </svg>
-        </>
-
-    )
-}
+const CONTACT_LAMBDA_API_URL = "https://m9glytrdm8.execute-api.us-east-2.amazonaws.com/contact"
 
 function Contact() {
 
     const [ messageSent, setMessageSent ] = useState(false)
+    const [ contactName, changeContactName ] = useState('')
+    const [ contactEmail, changeContactEmail ] = useState('')
+    const [ contactMessage, changeContactMessage ] = useState('')
+
+    async function postMessage(){
+        const formData = new FormData()
+        formData.append('name', contactName)
+        formData.append('email', contactEmail)
+        formData.append('message', contactMessage)
+
+        const response = await fetch(CONTACT_LAMBDA_API_URL,{
+            method: 'POST',
+            mode: 'cors',
+            cache: 'no-cache',
+            credentials: 'omit',
+            body: formData
+        });
+
+        return response.json();
+    }
 
     function handleSendMessage(e){
         e.preventDefault()
+        postMessage().then(data => console.log(data))
+
         setMessageSent(true)
     }
 
-    
+
     return (
         <section id="contact" className="bg-purple-700 py-12 px-8">
             <div className="mx-auto">
@@ -35,15 +48,15 @@ function Contact() {
                         <form onSubmit={handleSendMessage} className="flex flex-col justify-between">
                             <div className="mt-3">
                                 <label className="uppercase text-sm text-gray-600 font-bold">NAME</label>
-                                <input className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text"/>
+                                <input value={contactName} onChange={(e) => changeContactName(e.target.value)} className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text"/>
                             </div>
                             <div className="mt-3">
                                 <label className="uppercase text-sm text-gray-600 font-bold">EMAIL</label>
-                                <input className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text"/>
+                                <input value={contactEmail} onChange={(e) => changeContactEmail(e.target.value)} className="w-full bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text"/>
                             </div>
                             <div className="mt-3">
                                 <label className="uppercase text-sm text-gray-600 font-bold">MESSAGE</label>
-                                <textarea className="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text"/>
+                                <textarea value={contactMessage} onChange={(e) => changeContactMessage(e.target.value)} className="w-full h-32 bg-gray-300 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text"/>
                             </div>
                             <button className="mt-3 uppercase text-sm font-bold tracking-wide bg-indigo-500 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline">
                                 SEND MESSAGE
