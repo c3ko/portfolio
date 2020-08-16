@@ -3,7 +3,6 @@ import { useSpring, animated } from 'react-spring'
 import Link from 'next/link'
 
 function PostItem({ post }) {
-    const buttonProps = useSpring({ opacity: 1, from: { opacity: 0} })
     const [{ scale }, set] = useSpring(() => ({ scale: '1.0'}))
     const Months = {
         1: 'Jan', 2: 'Feb', 3: 'Mar', 4: 'Apr', 5: 'May', 6: 'Jun',
@@ -43,7 +42,7 @@ function PostItem({ post }) {
 function RecentPosts({ posts }) {
 
     return (
-        <section id="blog" className="bg-gray-100 py-12">
+        <section id="blog" className=" py-12">
             <div className="mx-auto w-10/12">
                 <h2 className="section-heading h-12 mx-auto text-purple-800 mb-0">Blog</h2>
                 <p className="mx-auto max-w-4xl mt-8 text-xl font-medium">

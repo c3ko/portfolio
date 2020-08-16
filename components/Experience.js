@@ -12,7 +12,7 @@ function Experience() {
     const skillsList = ['Javascript', 'Python', 'Java', 'C/C++', 'Django', 'AWS', 'React', 'Vue']
     
     return (
-        <section id="experience" className="bg-white py-12">
+        <section id="experience" className="py-12">
             <div className="mx-auto w-10/12 max-w-5xl">
                 <h2 className="section-heading mx-auto text-purple-800 mb-0">Experience</h2>
                 <div className="flex justify-center flex-wrap md:flex-nowrap mx-auto w-11/12">

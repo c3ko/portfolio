@@ -34,7 +34,7 @@ function Projects() {
         ]
 
     return (
-        <section id="projects" className="bg-gray-100 text-purple-800 py-12 fix-margin">
+        <section id="projects" className="text-purple-800 py-12 fix-margin">
             <div className="w-full md:mx-auto md:w-10/12 ">
                 <h2 className="section-heading mx-auto">Projects</h2>
                 

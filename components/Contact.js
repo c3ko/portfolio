@@ -35,10 +35,10 @@ function Contact() {
 
 
     return (
-        <section id="contact" className="bg-purple-700 py-12 px-8">
+        <section id="contact" className="py-12 px-8 mb-12">
             <div className="mx-auto">
-                <h2 className="section-heading mx-auto text-gray-100 mb-0">Contact</h2>
-                <div className="mt-8 bg-gray-100 px-6 py-8 rounded-md shadow-lg max-w-5xl mx-auto">
+                <h2 className="section-heading mx-auto text-purple-800 mb-0">Contact</h2>
+                <div className="mt-8 bg-white px-6 py-8 rounded-md shadow-lg max-w-5xl mx-auto">
                     <div className="flex justify-around flex-wrap">
                         <div className="mr-8">
                             <h3 className="text-gray-900 font-bold text-3xl">Interested? Lets talk.</h3>
