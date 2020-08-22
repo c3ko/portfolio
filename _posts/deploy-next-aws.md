@@ -1,5 +1,5 @@
 ---
-title: 'Learn How to Pre-render Pages Using Static Generation with Next.js'
+title: 'Deploy a NEXT.JS Static Site using CloudFront, S3 and Git hooks'
 date: '1597432502'
 tags: ['AWS', 'Python']
 ---

@@ -2,8 +2,8 @@ import React from 'react';
 
 function Footer() {
     return (
-        <footer className="bg-purple-900 h-16">
-            <ul></ul>
+        <footer className="h-16 mt-24 mb-64">
+            <ul className="flex"></ul>
         </footer>
     )
 }

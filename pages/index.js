@@ -26,7 +26,7 @@ export default function Home({ allPostsData }) {
     </Head>
     <Intro />
     <NavBar />
-    <main className=" bg-gray-100">
+    <main className="bg-gray-100">
       {renderMainComponents}
      
     </main>

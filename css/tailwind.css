@@ -52,6 +52,7 @@ body {
     max-width: 1400px;
 }
 
+
 .fix-margin {
     margin: 0;
 }
@@ -60,6 +61,32 @@ body {
     flex-grow: 0;
     flex-shrink: 0;
     flex-basis: 50%;
+}
+
+.menu-button {
+    position: relative;
+}
+
+
+.menu-button:hover::before {
+    display: block;
+    content: '';
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    top: -3px;
+    background: white;
+}
+
+
+.menu-button:hover::after {
+    display: block;
+    content: '';
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    bottom: -3px;
+    background: white;
 }
 
 .large-header {

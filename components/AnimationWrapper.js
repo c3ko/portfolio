@@ -4,13 +4,13 @@ import VisibilitySensor from 'react-visibility-sensor'
 
 function AnimationWrapper({ children }) {
     
-    const [{ y, opacity }, set] = useSpring(() => ({ y: 0, opacity: 0 }))
+    const [{ y, opacity }, set] = useSpring(() => ({ config: { duration: 450}, y: 8, opacity: 0 }))
 
     function onChange(isVisible) {
         if (isVisible)
-            set({ y: 5, opacity: 1 })
+            set({ y: 0, opacity: 1 })
         else
-            set({ y: 0, opacity: 0 })
+            set({ y: 8, opacity: 0 })
     }
 
     return (

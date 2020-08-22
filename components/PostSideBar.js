@@ -2,9 +2,13 @@ import React from 'react';
 
 function PostSideBar({ allPosts, currentPath }) {
     return (
-        <div className="">
-            
-        </div>
+        <ul className="list-none">
+            { allPosts.map(post => (
+                <li className="">
+                    
+                </li>
+            )) }
+        </ul>
     )
 }
 
