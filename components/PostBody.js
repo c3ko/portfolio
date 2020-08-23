@@ -2,10 +2,7 @@ import unified from 'unified'
 import parse from 'remark-parse'
 import remark2react from 'remark-react'
 import html from 'remark-html'
-import highlight from 'remark-highlight.js/dist'
-import './markdown-styles.css'
-
-import '../node_modules/highlight.js/styles/a11y-dark.css'
+import highlight from 'remark-highlight.js'
 
 export default function PostBody({ markdown }) {
     return (
