@@ -24,7 +24,7 @@ function Post({ post, allPosts }) {
     return (
         <animated.div 
           style={props}
-          className="flex bg-gray-100 w-5/6 max-w-6xl mt-32 mb-16 mx-auto"
+          className="flex bg-gray-100 w-5/6 max-w-6xl mt-32 mb-16 mx-4 sm:mx-auto"
         >
             <nav className="pt-8 w-3/12">
                 <Link href="/">
@@ -48,14 +48,14 @@ function Post({ post, allPosts }) {
             </nav>
             <section className="w-9/12">
               <article className="">
-                  <h1 className="text-gray-900 text-400 text-4xl font-bold mb-4">
+                  <h1 className="text-gray-800 text-400 text-4xl font-bold mb-4">
                     {post.title}
                   </h1>
                   <span className="mb-8 inline-flex justify-between w-full">
                     <p className="font-semibold text-gray-700 text-xl ">{getDateString(post.date)}</p>
                     <p className="font-semibold text-purple-700 text-xl ">{readTime.text}</p>
                   </span>
-                  <PostBody content={post.content} />
+                  <PostBody markdown={post.content} />
                   
               </article>
             </section>
@@ -77,14 +77,11 @@ export async function getStaticProps({ params }) {
       'slug'
     ])
 
-    const content = await markdownToHtml(post.content || '')
+    
   
     return {
       props: {
-        post: {
-          ...post,
-          content,
-        },
+        post,
         allPosts
       },
     }

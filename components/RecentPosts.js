@@ -12,7 +12,7 @@ function PostItem({ post }) {
                 set({scale: '1.04'})
             }} 
             onMouseLeave={() => set({scale: '1.0'})} 
-            className="text-center cursor-pointer bg-white shadow-md hover:shadow-lg border-2 border-gray-300 hover:border-purple-300  rounded-md px-5 py-3 mx-2 mb-4 max-w-xl">
+            className="  text-center cursor-pointer bg-white shadow-md hover:shadow-lg border-2 border-gray-300 hover:border-purple-300  rounded-md px-5 py-3 mx-2 mb-4 max-w-xl">
             <Link  href={`/blog/${post.slug}`}>
                 <a className="w-full">
                     <ul className="flex mb-1 flex-wrap">
