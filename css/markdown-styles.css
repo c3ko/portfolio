@@ -1,14 +1,15 @@
 .markdown {
     @apply text-lg;
 }
-  
+
 .markdown p,
 .markdown ul,
 .markdown ol,
 .markdown blockquote {
   @apply text-xl text-gray-800;
 }
-  
+
+/* purgecss ignore */
 .markdown pre {
   min-width: 100%;
   font-size: 1rem;
@@ -31,6 +32,7 @@
 }
 
 @media only screen and (max-width: 768px) {
+  /* purgecss ignore */
   pre {
     font-size: 0.875rem;
   }
