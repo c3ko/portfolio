@@ -1,7 +1,7 @@
 ---
-title: 'Deploy a NEXT.JS Static Site using CloudFront, S3 and Git hooks'
+title: 'Deploy a NEXT.JS Static Site using CloudFront, Route 53 and S3'
 date: '1597432502'
-tags: ['AWS', 'Python']
+tags: ['AWS', 'Python', 'React', 'Next']
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilisi morbi tempus. Praesent elementum facilisis leo vel fringilla. Congue mauris rhoncus aenean vel. Egestas sed tempus urna et pharetra pharetra massa massa ultricies.

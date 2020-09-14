@@ -1,5 +1,5 @@
 .markdown {
-    @apply text-lg ;
+    @apply text-lg;
 }
   
 .markdown p,
@@ -26,4 +26,8 @@
   
 .markdown h3 {
   @apply text-2xl mt-8 mb-4;
+}
+
+.markdown em {
+  @apply bg-gray-500;
 }

@@ -1,5 +1,5 @@
 ---
-title: 'Creating an email contact form using Flask, AWS SES and AWS Lambda - Part 1'
+title: 'Creating an email contact form using Flask and AWS -  Part 1 (CDK and AWS Lambda)'
 date: '1597432555'
 tags: ['AWS', 'Python']
 ---
@@ -25,44 +25,136 @@ You need to have the CDK Toolkit installed (It requires node). Follow the instru
 &nbsp;
 
 
-The commands below will create a new project directory for cdk build environemnt and a lambda subdirectory to store the lambda code:
-
-&nbsp;
-&nbsp;
+The commands below will create a new project directory for cdk build environemnt and a lambda subdirectory to store the lambda code and setup the cdk environment:
 
 ```
-mkdir -p cdk_flask_ses_lambda/lambda.
-cd flask-ses-contact-form-lambda
+mkdir cdk_flask_ses_lambda
+cd cdk_flask_ses_lambda
+
+cdk init --language python
+cdk bootstrap
+
+mkdir lambda
 ```
 &nbsp;
 &nbsp;
 
-Then create the virtual environment for CDK and install the necessary libraries.
+
+
+The cdk init command created a python virtual environment under the directory .env, activate this environment and install the necessary libraries:
 
 ```
-virtualenv venv
-. venv/bin/activate
+. .env/bin/activate
 
 pip install aws-cdk.aws-apigateway aws-cdk.aws-lambda aws-cdk.aws-iam
 ```
 &nbsp;
 &nbsp;
 
-Then setup the cdk environment:
+
+At this point the project directory structure should look like this (items marked *** are directories):
+
+~~~
+|-- README.md
+|-- app.py
+|-- cdk.json
+|-- cdk_flas_ses_lambda
+|   |-- __init__.py
+|   `-- cdk_flas_ses_lambda_stack.py
+|-- lambda
+|-- requirements.txt
+|-- setup.py
+`-- source.bat
+~~~
+
+&nbsp;
+&nbsp;
+
+Now, lets deactivate the current virtual environment and create another virtual environment to be used in python lambda:
 ```
-cdk init --language python
-cdk bootstrap
+deactivate
+
+cd lambda
+python3 -m venv env
+. env/bin/activate
+pip install flask boto3
 ```
 
 &nbsp;
 &nbsp;
 
-At this point the project directory structure should look like this:
 
-~~~
---
-~~~
-~~~python
-def function(x: int) -> int:
-    return x + 2
-~~~
+Configure CDK Stack to provision two main resources:
+
+
+### Lambda Function
+
+- The ***Lambda Function*** is provisioned by loading zip file in  ***/lambda*** containing Flask API code, lambda handler function and all the necessary libraries for Flask and Boto3.
+
+&nbsp;
+- The ***IAM Policy Statement*** creates a role for lambda handler, giving it access to send and recieve emails using SES.
+
+
+### API Gateway
+
+- The ***HTTP API Gateway*** i
+
+
+```python
+import os
+
+from aws_cdk import (
+    core,
+    aws_lambda as _lambda,
+    aws_apigateway as apigw,
+    aws_apigatewayv2 as apigw2,
+    aws_iam as _iam
+)
+
+
+class PythonContactFormSesLambdaStack(core.Stack):
+
+
+    def __init__(self, scope: core.Construct, id: str, **kwargs) -> None:
+
+        
+        super().__init__(scope, id, **kwargs)
+
+        # The code that defines your stack goes here
+        flask_handler = _lambda.Function(
+            self, 'FlaskHandler',
+            runtime=_lambda.Runtime.PYTHON_3_8,
+            code=_lambda.Code.asset('lambda/function.zip'),
+            handler='handler.lambda_handler',
+            timeout=core.Duration.seconds(20),
+        )
+        
+        flask_handler.add_to_role_policy(_iam.PolicyStatement(
+            effect=_iam.Effect.ALLOW,
+            resources=["*"],
+            actions=[
+                "ses:SendEmail",
+                "ses:SendRawEmail"
+            ]
+        ))
+
+        contact_email_integration = apigw2.LambdaProxyIntegration(
+            handler=flask_handler,
+            payload_format_version=apigw2.PayloadFormatVersion.VERSION_1_0
+
+        )
+
+        base_api = apigw2.HttpApi(
+            self,
+            id='contact-api',
+        )
+
+    
+        base_api.add_routes(
+            path='/contact',
+            methods=[apigw2.HttpMethod.POST],
+            integration=contact_email_integration
+        )
+
+
+```

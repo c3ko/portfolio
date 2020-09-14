@@ -9,7 +9,7 @@ function Experience() {
     
     ]
 
-    const skillsList = ['Javascript', 'Python', 'Java', 'C/C++', 'Django', 'AWS', 'React', 'Vue']
+    const skillsList = ['Javascript', 'Python', 'Java', 'Spring Boot', 'C/C++', 'Django', 'AWS', 'React', 'Vue']
     
     return (
         <section id="experience" className="py-12">
@@ -19,8 +19,7 @@ function Experience() {
                     <Timeline schoolsList={schoolList}/>
                     <Skills skillsList={skillsList} />
                 </div>
-                
-
+            
             </div>
         </section>
     )
