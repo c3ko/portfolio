@@ -8,11 +8,15 @@
 html {
     scroll-behavior: smooth;
 }
+
+
 body {
     font-family: 'Raleway', sans-serif;
 }
 
-
+html,body {
+    height: 100%;
+}
 .Chevron {
     position:relative;
     display:block;
@@ -89,6 +93,18 @@ body {
     background: white;
 }
 
+@keyframes animatedBackground {
+
+    from {
+        background-position: 0 0;
+
+    }
+
+    to {
+        background-position: 100% 0;
+    }
+}
+
 .large-header {
     position: relative;
     width: 100%;
@@ -97,6 +113,7 @@ body {
     background-color: #111;
     overflow: hidden;
     background-position: center center;
+    animation: animatedBackground 19s linear infinite alternate;
  }
 
  h1 {

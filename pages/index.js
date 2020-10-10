@@ -19,19 +19,20 @@ export default function Home({ allPostsData }) {
   })
 
  return (
-  <>
+  <div className="h-full">
     <Head>
       <title>Mohamed O.K</title>
       <link rel="icon" href="/img/rect83.png" />
+      <meta name="robots" content="noindex" />
     </Head>
-    <Intro />
+    <Intro className=" h-full"/>
     <NavBar />
     <main className="bg-gray-100">
       {renderMainComponents}
-     
+
     </main>
     <Footer />
-  </>
+  </div>
 )
   
 }

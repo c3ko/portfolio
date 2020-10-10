@@ -34,7 +34,7 @@ function Contact() {
 
 
     return (
-        <section id="contact" className="py-12 px-8 mb-12">
+        <section id="contact" className="bg-gray-100 py-12 px-8">
             <div className="mx-auto">
                 <h2 className="section-heading mx-auto text-purple-800 mb-0">Contact</h2>
                 <div className="mt-8 bg-gray-100 px-6 py-8  max-w-5xl mx-auto">
