@@ -30,12 +30,12 @@ function Timeline({ title, itemsList }){
 
     return (
         <div className="mx-auto relative m-8 text-center">
-            <h2 className="text-purple-900 font-semibold text-2xl">{title}</h2>
+            <h2 className="text-purple-800 font-semibold text-2xl">{title}</h2>
             <ul className="timeline">
                 {itemsList.map(item => (
                     <li className="event" data-date={`${item.start} -- ${item.end}`}>
-                        <p>{`${item.start} - ${item.end}`}</p>
-                        <h3 className="mb-2">{item.name}</h3>
+                        <p className="">{`${item.start} - ${item.end}`}</p>
+                        <h3 className="mb-2 text-purple-800">{item.name}</h3>
                         <p>{item.program}</p>
                     </li>
                 ))}

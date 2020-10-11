@@ -1,10 +1,15 @@
 
 function Progressbar({ label, number, norm}) {
     
-    const normalizedNumber = (number / norm) * 100;
+    const widthPercentage = `${number}%`
+
+    
     return (
-        <div className="shadow w-full bg-gray-200 mb-4">
-            <div class="bg-purple-500 text-xs leading-none py-2 text-center text-white" style={{width: `${normalizedNumber}%`}}>45%</div>
+        <div className="inline-flex w-full h-8 mb-4">
+            <div className="flex w-32 justify-center items-center text-xs text-center  h-full px-2 py-1 uppercase text-white bg-purple-900">{label}</div>
+            <span className="shadow w-full  bg-gray-200 ">
+                <div className="bg-purple-500 h-full text-xs leading-none py-3 text-center text-white" style={{width: widthPercentage}}>{widthPercentage}</div>
+            </span>
         </div>
     )
 }

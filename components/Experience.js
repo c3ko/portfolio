@@ -12,7 +12,7 @@ function Experience() {
 
     const workList = [
         {name: 'Freelance Developer', program: 'Working on personal projects', start: 'May. \'20', end: 'Present'},
-        {name: 'DSV Canada', program: 'Warehouse Associate', start: 'Sept. \'20', end: 'Apr. \'22'}
+        {name: 'DSV Canada', program: 'Warehouse Associate', start: 'Oct. \'15', end: 'Jan. \'20'}
     ]
 
     return (
