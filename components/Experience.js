@@ -5,14 +5,14 @@ import Timeline from './Timeline'
 
 function Experience() {
     const schoolList = [
-        {name: 'McMaster University', program: 'B.Tech Software Engineering Technology', start: 'Sept. \'20', end: 'Present'},
+        {name: 'McMaster University', program: 'B.Tech Software Engineering Technology (Part-Time/Evenings)', start: 'Sept. \'20', end: 'Present'},
         {name: 'Humber College', program: 'Computer Engineering Technology', start: 'Sept. \'17', end: 'Apr. \'20'},
     
     ]
 
     const workList = [
-        {name: 'Freelance Developer', program: 'Working on personal projects', start: 'May. \'20', end: 'Present'},
-        {name: 'DSV Canada', program: 'Warehouse Associate', start: 'Oct. \'15', end: 'Jan. \'20'}
+        {name: 'Developer for Hire', program: 'Currently Seeking Work', start: 'May. \'20', end: 'Present'},
+        
     ]
 
     return (

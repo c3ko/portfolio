@@ -24,7 +24,7 @@ function Post({ post, allPosts }) {
     return (
         <animated.div 
           style={props}
-          className="flex w-5/6 max-w-6xl mt-32 mb-16 mx-4 sm:mx-auto"
+          className="flex w-5/6 max-w-6xl mt-12 mb-16 mx-4 sm:mx-auto"
         >
             <nav className="pt-8 w-3/12">
                 <Link href="/">

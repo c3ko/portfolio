@@ -1,6 +1,6 @@
 ---
 title: 'Creating an email contact form using Flask and AWS -  Part 1 (CDK and AWS Lambda)'
-date: '1597432555'
+date: '1601211600'
 tags: ['AWS', 'Python']
 ---
 
@@ -97,7 +97,7 @@ Configure CDK Stack to provision two main resources:
 
 ### API Gateway
 
-- The ***HTTP API Gateway*** i
+- The ***HTTP API Gateway*** will be created with a POST route at '/contact'. It will use a ***Lambda Proxy Integration*** which will send the POST request as a Payload to the lambda function. The format of the payload can be selected as either '1.0' or '2.0', information on the format structure can be found [**here**](https://docs.aws.amazon.com/apigateway/latest/developerguide/http-api-develop-integrations-lambda.html). In this case I selected '1.0' as I'll be using awsgi python package to handle the payload and send it to my Flask application's WSGI inteface.
 
 
 ```python
@@ -140,7 +140,7 @@ class PythonContactFormSesLambdaStack(core.Stack):
 
         contact_email_integration = apigw2.LambdaProxyIntegration(
             handler=flask_handler,
-            payload_format_version=apigw2.PayloadFormatVersion.VERSION_1_0
+            payload_format_version=apigw2.PayloadFormatVersion.VERSION_2_0
 
         )
 
@@ -158,3 +158,7 @@ class PythonContactFormSesLambdaStack(core.Stack):
 
 
 ```
+&nbsp;
+&nbsp;
+
+See Part 2 for the setup of the Flask REST API, the AWS SDK calls for sending an email and the wrapper for calling it from a lambda function.

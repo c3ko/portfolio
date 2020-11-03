@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-import { useTransition, animated } from 'react-spring'
-
+import React from 'react';
+import { animated } from 'react-spring'
 
 function Intro() {
     return (

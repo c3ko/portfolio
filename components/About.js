@@ -4,36 +4,31 @@ import ProgressBar from './ProgressBar'
 
 function About() {
 
-    const skillsList =  [
-        {label: 'Python', confidence: '80%'},
-        {label: 'Javascript', confidence: '80%'},
-        'Javascript', 'Python', 'Java', 'Spring Boot', 'C/C++', 'Django', 'AWS', 'React', 'Vue'
-    ]
-    
-
     return (
-        <section id="about" className="about-section py-12">
-
+        <section id="about" className="about-section py-10">
             <h2 className="section-heading mx-auto text-purple-800 mb-0">About Me</h2>
-            <div className="flex flex-col justify-center items-center lg:flex-row  mx-auto w-10/12 mt-8">
-                <div className="w-1/2 mx-auto mb-8 lg:mr-8 ">
-                    <p className="text-2xl leading-normal whitespace-normal font-thin text-indigo-900 "> 
-                    I'm an aspiring software developer and recent graduate of the Computer Engineering Technology program at Humber College. My hope is that I can join a team where I
+            <div className="flex flex-col justify-center items-center xl:flex-row  mx-auto w-10/12 mt-8">
+                <div className=" mx-auto mb-8 xl:mr-8 ">
+                    <p className="text-3xl text-indigo-900 border-l-8 pl-4 border-indigo-900 font-bold mb-4">Mission-driven software developer with a passion for learning new concepts.</p>
+                    <p className="text-2xl leading-normal whitespace-normal font-thin text-indigo-900 mb-4"> 
+                    I'm an aspiring software developer and recent graduate of the Computer Engineering Technology program at Humber College. Whether it's testing the business logic on the back-end, 
+                    building client-side applications or working on cutting-edge technologies such as smart contracts, my hope is to work in a setting that will allow me to grow.
                     </p>
                 </div>
-
                 <div className="w-3/4 lg:1/3">
-                    <ProgressBar label="Java" number={80} />
-                    <ProgressBar label="Python" number={80} />
+                    <ProgressBar label="html" number={90} />
+                    <ProgressBar label="Java" number={90} />
+                    <ProgressBar label="Go" number={70} />
+                    <ProgressBar label="Python" number={80}/>
+                    <ProgressBar label="React" number={80} />
+                    <ProgressBar label="Android" number={80} />
                     <ProgressBar label="Javascript" number={70} />
-                    <ProgressBar label="html" number={70} />
                     <ProgressBar label="css" number={70} />
+                    <ProgressBar label="Spring Boot" number={60} />
+                    <ProgressBar label="Django" number={60} />
 
                 </div>
-
             </div>
-
-
         </section>
     )
 }
