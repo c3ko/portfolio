@@ -11,8 +11,10 @@ function About() {
                 <div className=" mx-auto mb-8 xl:mr-8 ">
                     <p className="text-3xl text-indigo-900 border-l-8 pl-4 border-indigo-900 font-bold mb-4">Mission-driven software developer with a passion for learning new concepts.</p>
                     <p className="text-2xl leading-normal whitespace-normal font-thin text-indigo-900 mb-4"> 
-                    I'm an aspiring software developer and recent graduate of the Computer Engineering Technology program at Humber College. Whether it's testing the business logic on the back-end, 
-                    building client-side applications or working on cutting-edge technologies such as smart contracts, my hope is to work in a setting that will allow me to grow.
+                    I'm an aspiring software developer and current Software Engineering Technology student at McMaster University. Whether it's working on 
+                    building backend APIs, client-side Single Page Applications or deploying cloud infrastructure in AWS/Azure/Digital-Ocean, I always look to broaden my working knowledge of
+                    current tools and look forward to learning new ones.
+
                     </p>
                 </div>
                 <div className="w-3/4 lg:1/3">
@@ -25,6 +27,8 @@ function About() {
                     <ProgressBar label="Javascript" number={70} />
                     <ProgressBar label="css" number={70} />
                     <ProgressBar label="Spring Boot" number={60} />
+                    <ProgressBar label="C#" number={60} />
+                    <ProgressBar label="ASP.NET Core" number={60} />
                     <ProgressBar label="Django" number={60} />
 
                 </div>

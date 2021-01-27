@@ -7,7 +7,7 @@ function PostItem({ post }) {
     const [{ scale }, set] = useSpring(() => ({ scale: '1.0'}))
     const dateString = getDateString(post.date)
     return (
-        <animated.li style={{transform: scale.interpolate(v => `scale(${v})`)}} 
+        <animated.li key={[post.slug]} style={{transform: scale.interpolate(v => `scale(${v})`)}} 
             onMouseEnter={() => {
                 set({scale: '1.04'})
             }} 
@@ -18,7 +18,7 @@ function PostItem({ post }) {
                 <a className="w-full">
                     <ul className="flex mb-1 flex-wrap">
                         {post.tags.map(tag => (
-                            <li className=" rounded-sm mb-1 px-2 py-1 bg-purple-600 font-semibold text-gray-300 mr-2">
+                            <li key={tag} className=" rounded-sm mb-1 px-2 py-1 bg-purple-600 font-semibold text-gray-300 mr-2">
                                 {tag}
                             </li>
                         ))}
